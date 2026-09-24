@@ -1,0 +1,137 @@
+{
+  "topic": "TCP vs UDP",
+  "sources": [
+    {
+      "id": "S1",
+      "title": "TCP vs UDP: Differences Between TCP & UDP Protocols",
+      "url": "https://www.avast.com/c-tcp-vs-udp-difference",
+      "publisher": "Avast"
+    },
+    {
+      "id": "S2",
+      "title": "What Is the Difference Between TCP and UDP?",
+      "url": "https://www.avg.com/en/signal/tcp-vs-udp",
+      "publisher": "AVG"
+    },
+    {
+      "id": "S3",
+      "title": "TCP vs UDP | 10 Key Differences Explained with Table & Examples",
+      "url": "https://ipcisco.com/lesson/tcp-versus-udp",
+      "publisher": "IPCisco"
+    },
+    {
+      "id": "S4",
+      "title": "Introduction to TCP and UDP",
+      "url": "https://networklessons.com/network-fundamentals/introduction-to-tcp-and-udp",
+      "publisher": "NetworkLessons"
+    },
+    {
+      "id": "S5",
+      "title": "Differences between TCP and UDP",
+      "url": "https://www.geeksforgeeks.org/computer-networks/differences-between-tcp-and-udp",
+      "publisher": "GeeksforGeeks"
+    }
+  ],
+  "points": [
+    {
+      "category": "connection_model",
+      "point": "TCP is connection-oriented and uses a 3-way handshake (SYN, SYN-ACK, ACK) before data transfer.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "connection_model",
+      "point": "UDP is connectionless — no handshake, no session state, packets are sent directly.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "reliability",
+      "point": "TCP guarantees delivery via acknowledgements (ACKs) and retransmission of lost segments.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "reliability",
+      "point": "UDP does not guarantee delivery; lost packets are simply dropped.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "ordering",
+      "point": "TCP maintains the order of segments using sequence numbers.",
+      "sources": ["S1", "S3", "S4", "S5"]
+    },
+    {
+      "category": "ordering",
+      "point": "UDP does not preserve order; packets may arrive out of sequence.",
+      "sources": ["S1", "S3", "S4", "S5"]
+    },
+    {
+      "category": "flow_control",
+      "point": "TCP implements flow control using a sliding window to prevent overwhelming the receiver.",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "flow_control",
+      "point": "UDP has no flow control.",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "congestion_control",
+      "point": "TCP implements congestion control (slow start, congestion avoidance, fast retransmit, fast recovery).",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "congestion_control",
+      "point": "UDP has no congestion control — the sender does not adapt to network conditions.",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "header_size",
+      "point": "TCP header is 20 bytes minimum (up to 60 bytes with options).",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "header_size",
+      "point": "UDP header is a fixed 8 bytes.",
+      "sources": ["S1", "S3", "S5"]
+    },
+    {
+      "category": "speed",
+      "point": "TCP is slower due to handshake, ACKs, and retransmission overhead.",
+      "sources": ["S1", "S2", "S3", "S5"]
+    },
+    {
+      "category": "speed",
+      "point": "UDP is faster and lighter because it has no setup or reliability overhead.",
+      "sources": ["S1", "S2", "S3", "S5"]
+    },
+    {
+      "category": "error_handling",
+      "point": "TCP performs error recovery via retransmission; UDP only performs a checksum and drops bad packets.",
+      "sources": ["S2", "S3", "S5"]
+    },
+    {
+      "category": "addressing",
+      "point": "TCP supports unicast only; UDP supports unicast, multicast, and broadcast.",
+      "sources": ["S3", "S5"]
+    },
+    {
+      "category": "use_cases_tcp",
+      "point": "TCP is used by HTTP/HTTPS, FTP, SSH, SMTP, IMAP, POP3 — applications where data integrity matters.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "use_cases_udp",
+      "point": "UDP is used by DNS, DHCP, NTP, SNMP, RTP (voice/video), QUIC — applications where speed matters.",
+      "sources": ["S1", "S2", "S3", "S4", "S5"]
+    },
+    {
+      "category": "layer",
+      "point": "Both TCP and UDP are Layer 4 (transport layer) protocols in the TCP/IP model.",
+      "sources": ["S4"]
+    },
+    {
+      "category": "standards",
+      "point": "TCP is defined in RFC 793; UDP is defined in RFC 768.",
+      "sources": ["S4"]
+    }
+  ]
+}
